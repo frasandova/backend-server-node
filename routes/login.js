@@ -8,6 +8,9 @@ var app = express();
 var Usuario = require('../models/usuario');
 
 
+//============================================
+//Login de usuario
+//============================================
 app.post('/', (req,res)=>{
     var body = req.body;
 Usuario.findOne({ email: body.email}, (err, usuarioDB)=>{
